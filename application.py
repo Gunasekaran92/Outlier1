@@ -1,5 +1,5 @@
 import flask
-from flask_cors import CORS, cross_origin
+
 from flask import request, jsonify
 import pandas as pd
 from sklearn.externals import joblib
@@ -7,7 +7,7 @@ from sklearn.externals import joblib
 
 
 @app.route('/api/model', methods=['GET'])
-@cross_origin(origin='localhost',headers=['Content-type','application/json'])
+
 def api_filter():
     query_parameters = request.args
 
